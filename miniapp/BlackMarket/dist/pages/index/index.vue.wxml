@@ -1,0 +1,21 @@
+<template name="03f1c20b">
+  <view class="_div data-v-167bd626 counter-warp">
+    <view class="_p data-v-167bd626 search" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+      <i-icon type="search" i-class="icon" size="20" class="_i-icon data-v-167bd626"></i-icon> 你随便搜，搜得到算我输
+    </view>
+    <i-tabs current="{{current}}" scroll bindchange="handleProxy" color="#000" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_i-tabs data-v-167bd626">
+      <i-tab title="热门推荐" key="{{-1}}" class="_i-tab data-v-167bd626"></i-tab>
+      <i-tab wx:key="index" key="{{index}}" title="{{item.name}}" wx:for="{{categories}}" wx:for-index="index" wx:for-item="item" class="_i-tab data-v-167bd626"></i-tab>
+    </i-tabs>
+    <view wx:if="{{currentTab && currentTab.cover_img}}" class="_div data-v-167bd626">
+      <image src="{{currentTab.cover_img}}" bindtap="handleProxy" mode="widthFix" class="_img data-v-167bd626 cover-img" data-eventid="{{'2'}}" data-comkey="{{$k}}"></image>
+      <view class="_div data-v-167bd626 children">
+        <view wx:key="index" key="{{index}}" wx:for="{{currentTab.children}}" wx:for-index="index" wx:for-item="item" class="_div data-v-167bd626">
+          <image src="{{item.image.url}}" mode="widthFix" class="_img data-v-167bd626"></image> <label class="_span data-v-167bd626">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="_p data-v-167bd626 hr"></view>
+    <prodcut products="{{products}}" class="_prodcut data-v-167bd626"></prodcut>
+  </view>
+</template>

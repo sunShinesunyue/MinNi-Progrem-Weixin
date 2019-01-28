@@ -1,0 +1,8 @@
+<template name="5d94361c">
+  <view class="_div data-v-b82a8bf8">
+    <view class="_p data-v-b82a8bf8">产品列表</view>
+    <view wx:key="index" key="{{index}}" wx:for="{{products}}" wx:for-index="index" wx:for-item="item" class="_div data-v-b82a8bf8">
+      <view class="_h3 data-v-b82a8bf8">{{item.name}}</view>
+    </view>
+  </view>
+</template>

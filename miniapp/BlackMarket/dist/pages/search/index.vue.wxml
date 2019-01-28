@@ -1,0 +1,16 @@
+<template name="61d0d46b">
+  <view class="_div data-v-7355317a">
+    <view class="_header data-v-7355317a"><input confirm-type="search" value="{{value}}" type="text" bindfocus="handleProxy" bindinput="handleProxy" placeholder="你随便搜 搜得到算我输" bindconfirm="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_input data-v-7355317a" /> <label bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_span data-v-7355317a">取消</label></view>
+    <view wx:if="{{showHistory}}" class="_section data-v-7355317a">
+      <view class="_p data-v-7355317a">历史记录</view>
+      <view class="_p data-v-7355317a"><label wx:key="index" key="{{index}}" wx:for="{{history}}" wx:for-index="index" wx:for-item="item" class="_span data-v-7355317a">{{item}}</label></view>
+    </view>
+    <view class="_section data-v-7355317a list" wx:else>
+      <view wx:key="index" key="{{index}}" class="_div data-v-7355317a item" wx:for="{{list}}" wx:for-index="index" wx:for-item="item">
+        <view class="_div data-v-7355317a wrap">
+          <image src="{{item.cover_img}}" mode="widthFix" class="_img data-v-7355317a"></image>
+        </view> <label class="_span data-v-7355317a ship" wx:if="{{!item.shipping_fee}}">包邮</label> <label class="_span data-v-7355317a name">{{item.name}}</label> <label class="_span data-v-7355317a point">{{item.selling_point}}</label> <label class="_span data-v-7355317a price">{{item.sell_price}}</label>
+      </view>
+    </view>
+  </view>
+</template>

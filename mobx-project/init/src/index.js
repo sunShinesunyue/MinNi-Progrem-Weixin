@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker';
 // 引入mobx的数据
 import store from './store';
 import { Provider } from 'mobx-react';
-// 要被包裹进去  2.将数据仓给展开
+// 要被包裹进去  2.将数据仓给展开  3.接下来就去页面里面
 ReactDOM.render(<Provider {...store}>
      <App />
 </Provider>

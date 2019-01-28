@@ -1,0 +1,51 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"miniprogramRoot": "dist/",
+	"compileType": "miniprogram",
+	"appid": "wx53aee7b40696fdc2",
+	"projectname": "BlackMarket-project1",
+	"libVersion": "2.2.1",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/my/main",
+					"query": "a=1&b=2&c=3&d=4",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索编译",
+					"pathName": "pages/search/main",
+					"scene": null
+				}
+			]
+		}
+	}
+}
