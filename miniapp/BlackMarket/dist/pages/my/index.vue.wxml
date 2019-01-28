@@ -1,9 +1,5 @@
 <template name="1ee529ef">
-  <view class="_div data-v-4d761a47">
-    <view class="_section data-v-4d761a47">
-      <i-cell-group class="_i-cell-group data-v-4d761a47">
-        <i-cell title="地址管理" is-link url class="_i-cell data-v-4d761a47"></i-cell> <button open-type="feedback" class="_button data-v-4d761a47">意见反馈</button> <button open-type="contact" class="_button data-v-4d761a47">在线客服</button>
-      </i-cell-group>
-    </view>
+  <view class="_div data-v-4d761a47 my-wrapper">
+    <view class="_div data-v-4d761a47 my-header"> sunyue </view>
   </view>
 </template>

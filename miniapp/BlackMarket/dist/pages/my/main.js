@@ -14,28 +14,15 @@ global.webpackJsonp([7],{
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_c('section', [_c('i-cell-group', {
-    attrs: {
-      "mpcomid": '1'
-    }
-  }, [_c('i-cell', {
-    attrs: {
-      "title": "地址管理",
-      "is-link": "",
-      "url": "",
-      "mpcomid": '0'
-    }
-  }), _vm._v(" "), _c('button', {
-    attrs: {
-      "open-type": "feedback"
-    }
-  }, [_vm._v("意见反馈")]), _vm._v(" "), _c('button', {
-    attrs: {
-      "open-type": "contact"
-    }
-  }, [_vm._v("在线客服")])], 1)], 1)], 1)
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "my-wrapper"
+  }, [_c('div', {
+    staticClass: "my-header"
+  }, [_vm._v("\n        sunyue\n    ")])])
+}]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -48,12 +35,47 @@ if (false) {
 
 /***/ }),
 
+/***/ 187:
+/***/ (function(module, exports) {
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// import { formatTime } from '@/utils/index'
+// import card from '@/components/card'
+
+// export default {
+//   components: {
+//     card
+//   },
+
+//   data () {
+//     return {
+//       logs: []
+//     }
+//   },
+
+//   created () {
+//     const logs = (wx.getStorageSync('logs') || [])
+//     this.logs = logs.map(log => formatTime(new Date(log)))
+//   }
+// }
+
+/***/ }),
+
 /***/ 77:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_awesome_typescript_loader_useCache_true_index_ts__ = __webpack_require__(84);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_awesome_typescript_loader_useCache_true_index_ts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_awesome_typescript_loader_useCache_true_index_ts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_script_index_0_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_script_index_0_index_vue__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_4d761a47_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(111);
 var disposed = false
 function injectStyle (ssrContext) {
@@ -62,6 +84,7 @@ function injectStyle (ssrContext) {
 }
 var normalizeComponent = __webpack_require__(6)
 /* script */
+
 /* template */
 
 /* styles */
@@ -71,7 +94,7 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_awesome_typescript_loader_useCache_true_index_ts___default.a,
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_script_index_0_index_vue___default.a,
   __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_4d761a47_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
@@ -98,14 +121,6 @@ if (false) {(function () {
 })()}
 
 /* harmony default export */ __webpack_exports__["a"] = (Component.exports);
-
-
-/***/ }),
-
-/***/ 84:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
 
 
 /***/ }),

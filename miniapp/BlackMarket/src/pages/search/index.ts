@@ -44,7 +44,7 @@ export default class Search extends Vue{
     this['search'](this.value);
     this.showHistory = false;
   }
-
+  
   change(e){
     this.value = e.target.value;
   }

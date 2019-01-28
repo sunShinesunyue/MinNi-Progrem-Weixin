@@ -1,0 +1,18 @@
+
+page {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.my-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.my-header {
+  width: 100%;
+  height: 422rpx;
+  background: -webkit-gradient( linear,left top, left bottom,from(#252525),color-stop(#494949),to(#545454));
+  background: linear-gradient( #252525,#494949,#545454);
+  color: #fff;
+}
