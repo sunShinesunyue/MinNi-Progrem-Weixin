@@ -1,9 +1,3 @@
 <template name="0891f8bd">
-  <view class="_div data-v-3ff96255">
-    <view class="_ul data-v-3ff96255 container log-list">
-      <view wx:key="index" key="{{index}}" class="_li data-v-3ff96255 log-item {{[aa ? 'red' : '']}}" wx:for="{{logs}}" wx:for-index="index" wx:for-item="log">
-        <card text="{{(index + 1) + ' . ' + log}}" class="_card data-v-3ff96255"></card>
-      </view>
-    </view>
-  </view>
+  <view class="_div data-v-3ff96255"> 我是真正的分类页面 </view>
 </template>

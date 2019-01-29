@@ -30,10 +30,10 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "我的页面",
 					"pathName": "pages/my/main",
 					"query": "a=1&b=2&c=3&d=4",
@@ -43,6 +43,14 @@
 					"id": -1,
 					"name": "搜索编译",
 					"pathName": "pages/search/main",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "分类页面",
+					"pathName": "pages/type/main",
+					"query": "a=1&b=2&c=3&d=4",
 					"scene": null
 				}
 			]
