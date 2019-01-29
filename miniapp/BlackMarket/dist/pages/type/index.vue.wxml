@@ -1,3 +1,6 @@
 <template name="0891f8bd">
-  <view class="_div data-v-3ff96255"> 我是真正的分类页面 </view>
+  <view class="_div data-v-3ff96255 type-wrapper">
+    <view class="_div data-v-3ff96255 type-header"> 搜索 头部 </view>
+    <view class="_div data-v-3ff96255 type-container"></view>
+  </view>
 </template>

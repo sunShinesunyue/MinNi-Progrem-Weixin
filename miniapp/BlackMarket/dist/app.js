@@ -16,6 +16,7 @@ global.webpackJsonp([2],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCategories; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getCategoryProduct; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return search; });
+/* unused harmony export getProductDetail */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(86);
 
 // 获取顶部tab分类
@@ -29,6 +30,37 @@ var getCategoryProduct = function getCategoryProduct(id) {
 // 搜索接口
 var search = function search(q) {
     return __WEBPACK_IMPORTED_MODULE_0__api__["a" /* fly */].request('api/shop/search-product', { q: q });
+};
+// 获取点击每一个商品的详情
+var getProductDetail = function getProductDetail(id) {
+    // 用fly请求数据 记得要return出去
+    return __WEBPACK_IMPORTED_MODULE_0__api__["a" /* fly */].request('api/multi-requests', {
+        "0": {
+            "method": "GET",
+            "uri": 'shop/product/' + id + '/statistics',
+            "data": {
+                "__form_id": null
+            }
+        },
+        "1": {
+            "method": "GET",
+            "uri": 'shop/product/' + id,
+            "data": {}
+        },
+        "2": {
+            "method": "GET",
+            "uri": 'shop/comments/short/' + id
+        },
+        "3": {
+            "method": "GET",
+            "uri": "shop/user/badges/cart"
+        }
+    }, {
+        method: 'POST',
+        header: {
+            'content-type': 'application/json'
+        }
+    });
 };
 
 /***/ }),

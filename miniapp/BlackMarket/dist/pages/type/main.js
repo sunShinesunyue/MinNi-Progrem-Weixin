@@ -14,9 +14,17 @@ global.webpackJsonp([4],{
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', [_vm._v("\n    我是真正的分类页面\n  ")])
+  return _vm._m(0)
 }
-var staticRenderFns = []
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "type-wrapper"
+  }, [_c('div', {
+    staticClass: "type-header"
+  }, [_vm._v("\n        搜索 头部\n    ")]), _vm._v(" "), _c('div', {
+    staticClass: "type-container"
+  })])
+}]
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -102,7 +110,18 @@ app.$mount();
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__utils_index__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(33);
+
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -111,25 +130,29 @@ app.$mount();
 //
 //
 
+// 1.从vuex里面引入
 
-// import card from '@/components/card'
-
+// 2.抛出
 /* harmony default export */ __webpack_exports__["a"] = ({
-  components: {
-    // card
-  },
-
+  // 3.数据
   data: function data() {
     return {
-      logs: []
+      current: 0 // 4.切换的下标
     };
   },
-  created: function created() {
-    var logs = wx.getStorageSync('logs') || [];
-    this.logs = logs.map(function (log) {
-      return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__utils_index__["a" /* formatTime */])(new Date(log));
-    });
-  }
+
+  // 4.计算属性
+  computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* mapState */])({
+    // 5.要渲染的数据 6.从数据仓下面取出数据
+    categories: function categories(state) {
+      return state.index.categories;
+    }
+  }), {
+    // 7.做一些判断
+
+    // 8.方法
+    methods: {}
+  })
 });
 
 /***/ })
