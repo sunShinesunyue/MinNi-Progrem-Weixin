@@ -14,17 +14,17 @@ global.webpackJsonp([4],{
 
 "use strict";
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _vm._m(0)
-}
-var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "type-wrapper"
   }, [_c('div', {
     staticClass: "type-header"
   }, [_vm._v("\n        搜索 头部\n    ")]), _vm._v(" "), _c('div', {
     staticClass: "type-container"
-  })])
-}]
+  }, [_c('section', {
+    staticClass: "list"
+  }, [_c('ul', [_c('li', [_vm._v("\n                " + _vm._s(_vm.categories) + "\n            ")])], 1)], 1)], 1)])
+}
+var staticRenderFns = []
 render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
@@ -129,6 +129,12 @@ app.$mount();
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 // 1.从vuex里面引入
 
@@ -141,7 +147,7 @@ app.$mount();
     };
   },
 
-  // 4.计算属性
+  // // 4.计算属性
   computed: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* mapState */])({
     // 5.要渲染的数据 6.从数据仓下面取出数据
     categories: function categories(state) {
@@ -149,9 +155,40 @@ app.$mount();
     }
   }), {
     // 7.做一些判断
+    currentList: function currentList() {
+      // 10.判断数据的长度
+      if (this.categories.length) {
+        // 11.获取当前切换下面所对应的内容
+        var current = this.categories[this.current];
+        // 12.替换所切换跳转的路径
+        current.cover_url = current.cover_url.replace('/commodity/details', '/detail/main');
+        // 13.将替换好的路径返出
+        return current;
+      } else {
+        // 14.就返回一个undefined
+        return undefined;
+      }
+    },
 
     // 8.方法
-    methods: {}
+    methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
+      // 9.将要渲染的数据请求出来
+      getCategories: 'index/getCategories'
+    }), {
+      // 15.点击获取
+      tabClick: function tabClick(e) {
+        // 16.当点击的这一项是undefined && 不和当前点击的这一项相对应
+        if (e.target.dataset.index != undefined && e.target.dataset.index != this.current) {
+          // 17.就让current 和当前点击的这一项对应上
+          this.current = e.target.dataset.index;
+        }
+      },
+
+      // 9.调用这个获取数据的方法
+      onShow: function onShow() {
+        this.getCategories();
+      }
+    })
   })
 });
 

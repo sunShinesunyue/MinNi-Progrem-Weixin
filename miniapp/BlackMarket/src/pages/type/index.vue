@@ -8,7 +8,12 @@
 
         <!-- 中间切换内容区域块 -->
         <div class="type-container">
-
+            <section class="list">
+              <ul @click="tabClick">
+                <!-- 进行数据渲染 -->
+                <li v-for="(item,index) in categories" :key="index">{{item.name}}</li>
+              </ul>
+            </section>
         </div>
     </div>
 </template>
@@ -24,17 +29,45 @@
           current:0 // 4.切换的下标
         }
       },
-      // 4.计算属性
+      // // 4.计算属性
       computed : {
         ...mapState({
           // 5.要渲染的数据 6.从数据仓下面取出数据
-          categories:state => state.index.categories
+          categories: state=>state.index.categories
         }),
         // 7.做一些判断
-
+        currentList() {
+            // 10.判断数据的长度
+            if(this.categories.length) {
+                // 11.获取当前切换下面所对应的内容
+                let current = this.categories[this.current]
+                // 12.替换所切换跳转的路径
+                current.cover_url = current.cover_url.replace('/commodity/details', '/detail/main')
+                // 13.将替换好的路径返出
+                return current
+            } else {
+              // 14.就返回一个undefined
+              return undefined
+            }
+        },
         // 8.方法
         methods: {
-          
+          ...mapActions({
+              // 9.将要渲染的数据请求出来
+              getCategories: 'index/getCategories'
+          }),
+          // 15.点击获取
+          tabClick(e) {
+            // 16.当点击的这一项是undefined && 不和当前点击的这一项相对应
+            if(e.target.dataset.index != undefined && e.target.dataset.index != this.current) {
+                // 17.就让current 和当前点击的这一项对应上
+                this.current = e.target.dataset.index;
+            }
+          },
+          // 9.调用这个获取数据的方法
+          onShow() {
+            this.getCategories();
+          }
         }
       }
     }

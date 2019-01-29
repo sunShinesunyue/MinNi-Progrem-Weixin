@@ -1,6 +1,14 @@
 <template name="0891f8bd">
   <view class="_div data-v-3ff96255 type-wrapper">
     <view class="_div data-v-3ff96255 type-header"> 搜索 头部 </view>
-    <view class="_div data-v-3ff96255 type-container"></view>
+    <view class="_div data-v-3ff96255 type-container">
+      <view class="_section data-v-3ff96255 list">
+        <view class="_ul data-v-3ff96255">
+          <view class="_li data-v-3ff96255">
+            {{categories}}
+          </view>
+        </view>
+      </view>
+    </view>
   </view>
 </template>
