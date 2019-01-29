@@ -1,19 +1,17 @@
 <template name="0891f8bd">
   <view class="_div data-v-3ff96255 type-wrapper">
     <view class="_div data-v-3ff96255 type-header"> 搜索 头部 </view>
-    <view class="_div data-v-3ff96255 type-container">
-      <view class="_section data-v-3ff96255 list">
-        <view bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_ul data-v-3ff96255">
-          <view wx:key="index" key="{{index}}" data-index="{{index}}" wx:for="{{categories}}" wx:for-index="index" wx:for-item="item" class="_li data-v-3ff96255 {{index == current ? 'active' : ''}}">{{item.name}}</view>
-        </view>
-        <view class="_div data-v-3ff96255 content" wx:if="{{currentList}}">
-          <navigator url="{{currentList.cover_url}}" class="_a data-v-3ff96255">
-            <image src="{{currentList.cover_img}}" mode="widthFix" class="_img data-v-3ff96255"></image>
-          </navigator>
-          <view class="_div data-v-3ff96255 children">
-            <view wx:key="index" key="{{index}}" wx:for="{{currentList.children}}" wx:for-index="index" wx:for-item="item" class="_div data-v-3ff96255">
-              <image src="{{item.image.url}}" mode="widthFix" class="_img data-v-3ff96255"></image> <label class="_span data-v-3ff96255">{{item.name}}</label>
-            </view>
+    <view class="_section data-v-3ff96255 list">
+      <view bindtap="handleProxy" class="_ul data-v-3ff96255 type-left" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+        <view wx:key="index" key="{{index}}" data-index="{{index}}" wx:for="{{categories}}" wx:for-index="index" wx:for-item="item" class="_li data-v-3ff96255 {{index == current ? 'active' : ''}}">{{item.name}}</view>
+      </view>
+      <view class="_div data-v-3ff96255 content" wx:if="{{currentList}}">
+        <navigator url="{{currentList.cover_url}}" class="_a data-v-3ff96255">
+          <image src="{{currentList.cover_img}}" mode="widthFix" class="_img data-v-3ff96255 imgFirst"></image>
+        </navigator>
+        <view class="_div data-v-3ff96255 children">
+          <view wx:key="index" key="{{index}}" wx:for="{{currentList.children}}" wx:for-index="index" wx:for-item="item" class="_div data-v-3ff96255">
+            <image src="{{item.image.url}}" mode="widthFix" class="_img data-v-3ff96255 imgSecond"></image> <label class="_span data-v-3ff96255">{{item.name}}</label>
           </view>
         </view>
       </view>

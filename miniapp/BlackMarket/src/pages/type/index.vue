@@ -7,25 +7,23 @@
         </div>
 
         <!-- 中间切换内容区域块 -->
-        <div class="type-container">
             <section class="list">
-              <ul @click="tabClick">
+              <ul @click="tabClick" class='type-left'>
                 <!-- 进行数据渲染 -->
                   <li v-for="(item, index) in categories" :key="index" :class="index==current?'active':''" :data-index="index">{{item.name}}</li>
               </ul>
               <div class="content" v-if="currentList">
                   <a :href="currentList.cover_url">
-                    <img :src="currentList.cover_img" mode="widthFix">
+                    <img :src="currentList.cover_img" mode="widthFix" class='imgFirst'>
                   </a>
                   <div class="children">
                     <div v-for="(item,index) in currentList.children" :key="index">
-                      <img :src="item.image.url" mode="widthFix">
+                      <img :src="item.image.url" mode="widthFix" class='imgSecond'>
                       <span>{{item.name}}</span>
                     </div>
                   </div>
               </div>
             </section>
-        </div>
     </div>
 </template>
 
@@ -87,7 +85,7 @@
 
 </script>
 
-<style>
+<style scoped>
     page {
       width:100%;
       height:100%;
@@ -106,8 +104,49 @@
       height:130rpx;
       border:1rpx solid #E5E3E4;
     }
-    .type-container{
-      flex:1;
+    .list {
       width:100%;
+      flex:1;
+      display: flex;
+    }
+    /*左右区域块排版*/
+    .list>ul {
+      width:30%;
+      height:auto;
+      background: #F8F8F8;
+      font-size:36rpx;
+      color:#4D4D4D;
+    }
+    .list ul li {
+      padding:45rpx 0;
+       border-left: 8rpx solid transparent;
+    }
+   .list ul li.active{
+      background: #fff;
+      border-left:8rpx solid #323232;
+    }
+    .content {
+      flex:1;
+      height:100%;
+      padding:0 28rpx;
+    }
+    .imgFirst {
+      width:500rpx;
+      height:265rpx;
+    }
+    .imgSecond {
+      width:86rpx;
+      height:123rpx;
+    }
+    .children {
+      display:flex;
+      flex-wrap:wrap;
+      text-align: center;
+    }
+    .children>div {
+      width:30%;
+      display:flex;
+      flex-direction: column;
+      text-align: center;
     }
 </style>

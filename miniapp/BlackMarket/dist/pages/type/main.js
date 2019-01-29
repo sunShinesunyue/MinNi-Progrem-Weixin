@@ -54,8 +54,6 @@ app.$mount();
 //
 //
 //
-//
-//
 
 // 1.从vuex里面引入
 
@@ -113,14 +111,7 @@ app.$mount();
 
 /***/ }),
 
-/***/ 112:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 122:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -129,11 +120,10 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "type-wrapper"
   }, [_c('div', {
     staticClass: "type-header"
-  }, [_vm._v("\n        搜索 头部\n    ")]), _vm._v(" "), _c('div', {
-    staticClass: "type-container"
-  }, [_c('section', {
+  }, [_vm._v("\n        搜索 头部\n    ")]), _vm._v(" "), _c('section', {
     staticClass: "list"
   }, [_c('ul', {
+    staticClass: "type-left",
     attrs: {
       "eventid": '0'
     },
@@ -155,6 +145,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       "href": _vm.currentList.cover_url
     }
   }, [_c('img', {
+    staticClass: "imgFirst",
     attrs: {
       "src": _vm.currentList.cover_img,
       "mode": "widthFix"
@@ -165,12 +156,13 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     return _c('div', {
       key: index
     }, [_c('img', {
+      staticClass: "imgSecond",
       attrs: {
         "src": item.image.url,
         "mode": "widthFix"
       }
     }), _vm._v(" "), _c('span', [_vm._v(_vm._s(item.name))])])
-  }))]) : _vm._e()], 1)], 1)])
+  }))]) : _vm._e()], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -185,16 +177,23 @@ if (false) {
 
 /***/ }),
 
+/***/ 204:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_3ff96255_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(122);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_3ff96255_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(202);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(112)
+  __webpack_require__(204)
 }
 var normalizeComponent = __webpack_require__(4)
 /* script */
@@ -204,12 +203,12 @@ var normalizeComponent = __webpack_require__(4)
 /* styles */
 var __vue_styles__ = injectStyle
 /* scopeId */
-var __vue_scopeId__ = null
+var __vue_scopeId__ = "data-v-3ff96255"
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_script_index_0_index_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_3ff96255_hasScoped_false_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_3ff96255_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__["a" /* default */],
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
