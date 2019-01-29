@@ -32,7 +32,7 @@ class Index extends Vue {
     });
   }
 
-  handleChange ({target}) {
+  handleChange ({target}) { 
     console.log('target...', target)
     this.current = target.key;
     this.getProduct();

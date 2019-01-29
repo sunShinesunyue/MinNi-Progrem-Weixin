@@ -1,5 +1,12 @@
 <template name="1ee529ef">
   <view class="_div data-v-4d761a47 my-wrapper">
-    <view class="_div data-v-4d761a47 my-header"> sunyue </view>
+    <view class="_div data-v-4d761a47 my-header">
+      <view class="_section data-v-4d761a47"> 我是用户的信息 </view>
+    </view>
+    <view class="_div data-v-4d761a47 my-bottom"><button open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-4d761a47">获取用户信息</button>
+      <i-cell-group class="_i-cell-group data-v-4d761a47">
+        <i-cell title="地址管理" is-link url class="_i-cell data-v-4d761a47"></i-cell> <button class="_button data-v-4d761a47">意见反馈</button> <button class="_button data-v-4d761a47">在线客服</button>
+      </i-cell-group>
+    </view>
   </view>
 </template>

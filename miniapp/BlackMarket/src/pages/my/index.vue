@@ -2,31 +2,24 @@
   <div class="my-wrapper">
       <!-- 头部 -->
       <div class="my-header">
-          sunyue
+          <section>
+              我是用户的信息
+          </section>
+      </div>
+      <!-- 下面的部分 -->
+      <div class="my-bottom">
+          <button open-type="getUserInfo" @getuserinfo="getUserInfo">获取用户信息</button>
+          <i-cell-group>
+            <i-cell title="地址管理" is-link url=""></i-cell>
+            <button>意见反馈</button>
+            <button>在线客服</button>
+          </i-cell-group>
       </div>
   </div>
 </template>
 
-<script>
-// import { formatTime } from '@/utils/index'
-// import card from '@/components/card'
+<script lang="ts" src="./index.ts">
 
-// export default {
-//   components: {
-//     card
-//   },
-
-//   data () {
-//     return {
-//       logs: []
-//     }
-//   },
-
-//   created () {
-//     const logs = (wx.getStorageSync('logs') || [])
-//     this.logs = logs.map(log => formatTime(new Date(log)))
-//   }
-// }
 </script>
 
 <style>
