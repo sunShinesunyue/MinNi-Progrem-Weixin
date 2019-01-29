@@ -11,8 +11,19 @@
             <section class="list">
               <ul @click="tabClick">
                 <!-- 进行数据渲染 -->
-                <li v-for="(item,index) in categories" :key="index">{{item.name}}</li>
+                  <li v-for="(item, index) in categories" :key="index" :class="index==current?'active':''" :data-index="index">{{item.name}}</li>
               </ul>
+              <div class="content" v-if="currentList">
+                  <a :href="currentList.cover_url">
+                    <img :src="currentList.cover_img" mode="widthFix">
+                  </a>
+                  <div class="children">
+                    <div v-for="(item,index) in currentList.children" :key="index">
+                      <img :src="item.image.url" mode="widthFix">
+                      <span>{{item.name}}</span>
+                    </div>
+                  </div>
+              </div>
             </section>
         </div>
     </div>
@@ -49,7 +60,9 @@
               // 14.就返回一个undefined
               return undefined
             }
-        },
+        }
+      
+      },
         // 8.方法
         methods: {
           ...mapActions({
@@ -63,13 +76,13 @@
                 // 17.就让current 和当前点击的这一项对应上
                 this.current = e.target.dataset.index;
             }
-          },
+          }
+          
+        },
           // 9.调用这个获取数据的方法
           onShow() {
             this.getCategories();
           }
-        }
-      }
     }
 
 </script>

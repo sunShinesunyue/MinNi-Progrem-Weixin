@@ -1,23 +1,307 @@
 require("./common/manifest.js")
 require("./common/vendor.js")
-global.webpackJsonp([2],{
+global.webpackJsonp([1],{
+
+/***/ 102:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_index__ = __webpack_require__(51);
+
+
+var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default.a))(function (resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : new P(function (resolve) {
+                resolve(result.value);
+            }).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+/**
+ * 一：详情页的数据仓
+ */
+ // 1.有数据
+// 2.内部状态数据
+var state = {
+    info: {}
+};
+// 3.行为
+var actions = {
+    // 4.异步取值
+    getProductDetail: function getProductDetail(_ref, id) {
+        var commit = _ref.commit;
+
+        return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+            var data;
+            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                while (1) {
+                    switch (_context.prev = _context.next) {
+                        case 0:
+                            _context.next = 2;
+                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__data_index__["a" /* getProductDetail */])(id);
+
+                        case 2:
+                            data = _context.sent;
+                            // 5.获取响应的数据
+                            console.log('----data', data);
+
+                        case 4:
+                        case 'end':
+                            return _context.stop();
+                    }
+                }
+            }, _callee, this);
+        }));
+    }
+};
+// 4.抛出
+/* harmony default export */ __webpack_exports__["a"] = ({
+    namespaced: true,
+    state: state,
+    actions: actions
+});
+
+/***/ }),
 
 /***/ 103:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_index__ = __webpack_require__(51);
+
+
+var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default.a))(function (resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : new P(function (resolve) {
+                resolve(result.value);
+            }).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+var state = {
+    categories: [],
+    products: {}
+};
+var mutations = {
+    updateCategories: function updateCategories(state, categories) {
+        state.categories = categories;
+    },
+    updateCategoryProduct: function updateCategoryProduct(state, products) {
+        state.products = products;
+    }
+};
+var actions = {
+    // 获取目录
+    getCategories: function getCategories(_ref) {
+        var commit = _ref.commit;
+
+        return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+            var data;
+            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                while (1) {
+                    switch (_context.prev = _context.next) {
+                        case 0:
+                            _context.next = 2;
+                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__data_index__["c" /* getCategories */])();
+
+                        case 2:
+                            data = _context.sent;
+
+                            console.log('data...', data);
+                            commit('updateCategories', data.data);
+
+                        case 5:
+                        case 'end':
+                            return _context.stop();
+                    }
+                }
+            }, _callee, this);
+        }));
+    },
+
+    // 获取详情
+    getCategoryProduct: function getCategoryProduct(_ref2, id) {
+        var commit = _ref2.commit;
+
+        return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2() {
+            var data;
+            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+                while (1) {
+                    switch (_context2.prev = _context2.next) {
+                        case 0:
+                            _context2.next = 2;
+                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__data_index__["d" /* getCategoryProduct */])(id);
+
+                        case 2:
+                            data = _context2.sent;
+
+                            console.log('data...', data);
+                            commit('updateCategoryProduct', data.data);
+
+                        case 5:
+                        case 'end':
+                            return _context2.stop();
+                    }
+                }
+            }, _callee2, this);
+        }));
+    }
+};
+/* harmony default export */ __webpack_exports__["a"] = ({
+    namespaced: true,
+    mutations: mutations,
+    state: state,
+    actions: actions
+});
+
+/***/ }),
+
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(28);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_index__ = __webpack_require__(51);
+
+
+var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
+    return new (P || (P = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default.a))(function (resolve, reject) {
+        function fulfilled(value) {
+            try {
+                step(generator.next(value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function rejected(value) {
+            try {
+                step(generator["throw"](value));
+            } catch (e) {
+                reject(e);
+            }
+        }
+        function step(result) {
+            result.done ? resolve(result.value) : new P(function (resolve) {
+                resolve(result.value);
+            }).then(fulfilled, rejected);
+        }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+var state = {
+    list: []
+};
+var mutations = {
+    updateList: function updateList(state, list) {
+        function formatPrice(price) {
+            price = price.toString();
+            var len = price.length;
+            return '￥' + price.slice(0, len - 2) + '.' + price.slice(len - 2);
+        }
+        list.forEach(function (item) {
+            item.sell_price = formatPrice(item.sell_price);
+        });
+        state.list = list;
+    }
+};
+var actions = {
+    search: function search(_ref, q) {
+        var commit = _ref.commit;
+
+        return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
+            var data;
+            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+                while (1) {
+                    switch (_context.prev = _context.next) {
+                        case 0:
+                            _context.next = 2;
+                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__data_index__["b" /* search */])(q);
+
+                        case 2:
+                            data = _context.sent;
+
+                            console.log('data...', data);
+                            commit('updateList', data.data);
+
+                        case 5:
+                        case 'end':
+                            return _context.stop();
+                    }
+                }
+            }, _callee, this);
+        }));
+    }
+};
+/* harmony default export */ __webpack_exports__["a"] = ({
+    namespaced: true,
+    state: state,
+    mutations: mutations,
+    actions: actions
+});
+
+/***/ }),
+
+/***/ 114:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 49:
+/***/ 51:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getCategories; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getCategoryProduct; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return search; });
-/* unused harmony export getProductDetail */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(86);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getCategories; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getCategoryProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return search; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getProductDetail; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__api__ = __webpack_require__(91);
 
 // 获取顶部tab分类
 var getCategories = function getCategories() {
@@ -31,9 +315,10 @@ var getCategoryProduct = function getCategoryProduct(id) {
 var search = function search(q) {
     return __WEBPACK_IMPORTED_MODULE_0__api__["a" /* fly */].request('api/shop/search-product', { q: q });
 };
+// 获取订单数据
 // 获取点击每一个商品的详情
+// 获取商品详情
 var getProductDetail = function getProductDetail(id) {
-    // 用fly请求数据 记得要return出去
     return __WEBPACK_IMPORTED_MODULE_0__api__["a" /* fly */].request('api/multi-requests', {
         "0": {
             "method": "GET",
@@ -65,17 +350,18 @@ var getProductDetail = function getProductDetail(id) {
 
 /***/ }),
 
-/***/ 72:
+/***/ 73:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_index__ = __webpack_require__(95);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_search__ = __webpack_require__(96);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__modules_index__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__modules_search__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__modules_detail__ = __webpack_require__(102);
 
 
 
@@ -86,28 +372,30 @@ __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex
 
 
 
+
 /* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["c" /* default */].Store({
   modules: {
     index: __WEBPACK_IMPORTED_MODULE_3__modules_index__["a" /* default */],
-    search: __WEBPACK_IMPORTED_MODULE_4__modules_search__["a" /* default */]
+    search: __WEBPACK_IMPORTED_MODULE_4__modules_search__["a" /* default */],
+    detail: __WEBPACK_IMPORTED_MODULE_5__modules_detail__["a" /* default */]
   },
   plugins: [__WEBPACK_IMPORTED_MODULE_2_vuex_dist_logger___default()()]
 }));
 
 /***/ }),
 
-/***/ 73:
+/***/ 74:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_awesome_typescript_loader_useCache_true_app_ts__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_awesome_typescript_loader_useCache_true_app_ts__ = __webpack_require__(83);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(103)
+  __webpack_require__(114)
 }
-var normalizeComponent = __webpack_require__(6)
+var normalizeComponent = __webpack_require__(4)
 /* script */
 /* template */
 var __vue_template__ = null
@@ -148,27 +436,27 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 80:
+/***/ 83:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_classCallCheck__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_babel_runtime_helpers_createClass__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(22);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_property__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_property__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_property___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_property__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_typeof__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_typeof__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_typeof___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_babel_runtime_helpers_typeof__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_own_property_descriptor__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_own_property_descriptor__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_own_property_descriptor___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_babel_runtime_core_js_object_get_own_property_descriptor__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_vue_property_decorator__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_vue_property_decorator__ = __webpack_require__(7);
 
 
 
@@ -186,7 +474,7 @@ var __decorate = this && this.__decorate || function (decorators, target, key, d
     }return c > 3 && r && __WEBPACK_IMPORTED_MODULE_5_babel_runtime_core_js_object_define_property___default()(target, key, r), r;
 };
 
-var debug = __webpack_require__(50)('log:App');
+var debug = __webpack_require__(52)('log:App');
 // 必须使用装饰器的方式来指定components
 var App = function (_Vue) {
     __WEBPACK_IMPORTED_MODULE_4_babel_runtime_helpers_inherits___default()(App, _Vue);
@@ -234,17 +522,17 @@ App = __decorate([__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_8_vue_property
 
 /***/ }),
 
-/***/ 86:
+/***/ 91:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return fly; });
 /* unused harmony export wxApiToPromise */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__ = __webpack_require__(28);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flyio_dist_npm_wx__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flyio_dist_npm_wx__ = __webpack_require__(184);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_flyio_dist_npm_wx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_flyio_dist_npm_wx__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash__ = __webpack_require__(185);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_lodash___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_lodash__);
 
 
@@ -314,13 +602,13 @@ function wxApiToPromise(api, arg1) {
 
 /***/ }),
 
-/***/ 87:
+/***/ 92:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_property_decorator__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__store_index_js__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_property_decorator__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__store_index_js__ = __webpack_require__(73);
 
 
 var isApp = false; //尝试mpvue-entry
@@ -339,217 +627,14 @@ __WEBPACK_IMPORTED_MODULE_0_vue_property_decorator__["a" /* Vue */].prototype.$s
 /* app-only-end */
 if (isApp) {
     // 在这个地方引入是为了registerHooks先执行
-    MyApp = __webpack_require__(73).default;
+    MyApp = __webpack_require__(74).default;
 } else {
     // MyApp = require('./index.vue')
 }
 var app = new __WEBPACK_IMPORTED_MODULE_0_vue_property_decorator__["a" /* Vue */](MyApp);
 app.$mount();
 
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_index__ = __webpack_require__(49);
-
-
-var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default.a))(function (resolve, reject) {
-        function fulfilled(value) {
-            try {
-                step(generator.next(value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function rejected(value) {
-            try {
-                step(generator["throw"](value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function step(result) {
-            result.done ? resolve(result.value) : new P(function (resolve) {
-                resolve(result.value);
-            }).then(fulfilled, rejected);
-        }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-
-var state = {
-    categories: [],
-    products: {}
-};
-var mutations = {
-    updateCategories: function updateCategories(state, categories) {
-        state.categories = categories;
-    },
-    updateCategoryProduct: function updateCategoryProduct(state, products) {
-        state.products = products;
-    }
-};
-var actions = {
-    // 获取目录
-    getCategories: function getCategories(_ref) {
-        var commit = _ref.commit;
-
-        return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
-            var data;
-            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-                while (1) {
-                    switch (_context.prev = _context.next) {
-                        case 0:
-                            _context.next = 2;
-                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__data_index__["b" /* getCategories */])();
-
-                        case 2:
-                            data = _context.sent;
-
-                            console.log('data...', data);
-                            commit('updateCategories', data.data);
-
-                        case 5:
-                        case 'end':
-                            return _context.stop();
-                    }
-                }
-            }, _callee, this);
-        }));
-    },
-
-    // 获取详情
-    getCategoryProduct: function getCategoryProduct(_ref2, id) {
-        var commit = _ref2.commit;
-
-        return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee2() {
-            var data;
-            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
-                while (1) {
-                    switch (_context2.prev = _context2.next) {
-                        case 0:
-                            _context2.next = 2;
-                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__data_index__["c" /* getCategoryProduct */])(id);
-
-                        case 2:
-                            data = _context2.sent;
-
-                            console.log('data...', data);
-                            commit('updateCategoryProduct', data.data);
-
-                        case 5:
-                        case 'end':
-                            return _context2.stop();
-                    }
-                }
-            }, _callee2, this);
-        }));
-    }
-};
-/* harmony default export */ __webpack_exports__["a"] = ({
-    namespaced: true,
-    mutations: mutations,
-    state: state,
-    actions: actions
-});
-
-/***/ }),
-
-/***/ 96:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ = __webpack_require__(71);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_index__ = __webpack_require__(49);
-
-
-var __awaiter = this && this.__awaiter || function (thisArg, _arguments, P, generator) {
-    return new (P || (P = __WEBPACK_IMPORTED_MODULE_1_babel_runtime_core_js_promise___default.a))(function (resolve, reject) {
-        function fulfilled(value) {
-            try {
-                step(generator.next(value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function rejected(value) {
-            try {
-                step(generator["throw"](value));
-            } catch (e) {
-                reject(e);
-            }
-        }
-        function step(result) {
-            result.done ? resolve(result.value) : new P(function (resolve) {
-                resolve(result.value);
-            }).then(fulfilled, rejected);
-        }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-
-var state = {
-    list: []
-};
-var mutations = {
-    updateList: function updateList(state, list) {
-        function formatPrice(price) {
-            price = price.toString();
-            var len = price.length;
-            return '￥' + price.slice(0, len - 2) + '.' + price.slice(len - 2);
-        }
-        list.forEach(function (item) {
-            item.sell_price = formatPrice(item.sell_price);
-        });
-        state.list = list;
-    }
-};
-var actions = {
-    search: function search(_ref, q) {
-        var commit = _ref.commit;
-
-        return __awaiter(this, void 0, void 0, /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.mark(function _callee() {
-            var data;
-            return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-                while (1) {
-                    switch (_context.prev = _context.next) {
-                        case 0:
-                            _context.next = 2;
-                            return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__data_index__["a" /* search */])(q);
-
-                        case 2:
-                            data = _context.sent;
-
-                            console.log('data...', data);
-                            commit('updateList', data.data);
-
-                        case 5:
-                        case 'end':
-                            return _context.stop();
-                    }
-                }
-            }, _callee, this);
-        }));
-    }
-};
-/* harmony default export */ __webpack_exports__["a"] = ({
-    namespaced: true,
-    state: state,
-    mutations: mutations,
-    actions: actions
-});
-
 /***/ })
 
-},[87]);
+},[92]);
 //# sourceMappingURL=app.js.map

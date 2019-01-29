@@ -12,7 +12,7 @@ const state = {
 const actions = {
     // 4.异步取值
     async getProductDetail({commit},id) {
-        let data = await etProductDetail(id) // 5.获取响应的数据
+        let data = await getProductDetail(id) // 5.获取响应的数据
         console.log('----data',data)
     }
 }

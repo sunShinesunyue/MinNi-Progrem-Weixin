@@ -1,3 +1,4 @@
+@import "../../common/vendor.wxss";
 
 ._header.data-v-7355317a {
   display: -webkit-box;

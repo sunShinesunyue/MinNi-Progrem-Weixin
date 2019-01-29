@@ -1,7 +1,7 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 // 1.从vuex里面引入mapState,mapActions
-import {mapStata,mapActions} from 'vuex'
+import {mapState,mapActions} from 'vuex'
 
 @Component({
     // 2.计算属性
