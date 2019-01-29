@@ -1,8 +1,7 @@
 {
   "usingComponents": {
     "i-button": "../../iview/button/index",
-    "i-tag": "../../iview/tag/index",
-    "i-cell-group": "../../iview/cell-group/index",
-    "i-cell": "../../iview/cell/index"
+    "i-modal": "../../iview/modal/index",
+    "i-icon": "../../iview/icon/index"
   }
 }

@@ -18,28 +18,150 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "my-wrapper"
   }, [_c('div', {
     staticClass: "my-header"
-  }, [_c('section', [_vm._v("\n            我是用户的信息\n        ")])], 1), _vm._v(" "), _c('div', {
+  }, [_c('header', {
+    staticClass: "header"
+  }, [_c('img', {
+    attrs: {
+      "src": _vm.userInfo.avatarUrl,
+      "mode": "widthFix"
+    }
+  }), _vm._v(" "), _c('span', [_vm._v(_vm._s(_vm.userInfo.nickName))])])]), _vm._v(" "), _c('section', [_c('p', {
+    staticClass: "order",
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": function($event) {
+        _vm.goOrder('all')
+      }
+    }
+  }, [_c('span', [_vm._v("我的订单")]), _vm._v(" "), _c('span', [_vm._v("查看全部")])]), _vm._v(" "), _c('div', {
+    staticClass: "type"
+  }, [_c('li', {
+    attrs: {
+      "eventid": '1'
+    },
+    on: {
+      "click": function($event) {
+        _vm.goOrder('unpaid')
+      }
+    }
+  }, [_c('i-icon', {
+    attrs: {
+      "type": "commodity",
+      "size": "30",
+      "mpcomid": '0'
+    }
+  }), _vm._v(" "), _c('span', [_vm._v("待付款")])], 1), _vm._v(" "), _c('li', {
+    attrs: {
+      "eventid": '2'
+    },
+    on: {
+      "click": function($event) {
+        _vm.goOrder('unshipped')
+      }
+    }
+  }, [_c('i-icon', {
+    attrs: {
+      "type": "commodity",
+      "size": "30",
+      "mpcomid": '1'
+    }
+  }), _vm._v(" "), _c('span', [_vm._v("待发货")])], 1), _vm._v(" "), _c('li', {
+    attrs: {
+      "eventid": '3'
+    },
+    on: {
+      "click": function($event) {
+        _vm.goOrder('unreceived')
+      }
+    }
+  }, [_c('i-icon', {
+    attrs: {
+      "type": "commodity",
+      "size": "30",
+      "mpcomid": '2'
+    }
+  }), _vm._v(" "), _c('span', [_vm._v("待收货")])], 1), _vm._v(" "), _c('li', {
+    attrs: {
+      "eventid": '4'
+    },
+    on: {
+      "click": function($event) {
+        _vm.goOrder('unevaluated')
+      }
+    }
+  }, [_c('i-icon', {
+    attrs: {
+      "type": "commodity",
+      "size": "30",
+      "mpcomid": '3'
+    }
+  }), _vm._v(" "), _c('span', [_vm._v("评价")])], 1), _vm._v(" "), _c('li', {
+    attrs: {
+      "eventid": '5'
+    },
+    on: {
+      "click": function($event) {
+        _vm.goOrder('evaluated')
+      }
+    }
+  }, [_c('i-icon', {
+    attrs: {
+      "type": "commodity",
+      "size": "30",
+      "mpcomid": '4'
+    }
+  }), _vm._v(" "), _c('span', [_vm._v("退款售后")])], 1)], 1)], 1), _vm._v(" "), _c('i-modal', {
+    attrs: {
+      "visible": _vm.showModal,
+      "show-ok": "false",
+      "show-cancel": "false",
+      "mpcomid": '5'
+    }
+  }, [_c('view', [_vm._v("为了更好的提供服务,我们需要获取您的用户信息")]), _vm._v(" "), _c('button', {
+    attrs: {
+      "open-type": "getUserInfo",
+      "eventid": '6'
+    },
+    on: {
+      "getuserinfo": _vm.getUserInfo,
+      "click": function($event) {
+        _vm.showModal = false
+      }
+    }
+  }, [_vm._v("确定")]), _vm._v(" "), _c('button', {
+    attrs: {
+      "open-type": "openSetting",
+      "eventid": '7'
+    },
+    on: {
+      "click": function($event) {
+        _vm.showModal = false
+      }
+    }
+  }, [_vm._v("取消")])], 1), _vm._v(" "), _c('div', {
     staticClass: "my-bottom"
   }, [_c('button', {
     attrs: {
       "open-type": "getUserInfo",
-      "eventid": '0'
+      "eventid": '8'
     },
     on: {
       "getuserinfo": _vm.getUserInfo
     }
   }, [_vm._v("获取用户信息")]), _vm._v(" "), _c('i-cell-group', {
     attrs: {
-      "mpcomid": '1'
+      "mpcomid": '7'
     }
   }, [_c('i-cell', {
     attrs: {
       "title": "地址管理",
       "is-link": "",
       "url": "",
-      "mpcomid": '0'
+      "mpcomid": '6'
     }
-  }), _vm._v(" "), _c('button', [_vm._v("意见反馈")]), _vm._v(" "), _c('button', [_vm._v("在线客服")])], 1)], 1)])
+  }), _vm._v(" "), _c('button', [_vm._v("意见反馈")]), _vm._v(" "), _c('button', [_vm._v("在线客服")])], 1)], 1)], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -155,6 +277,7 @@ var default_1 = function (_Vue) {
         var _this = __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_possibleConstructorReturn___default()(this, (default_1.__proto__ || __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_get_prototype_of___default()(default_1)).apply(this, arguments));
 
         _this.userInfo = {};
+        _this.showModal = false;
         return _this;
     }
     // 1.获取用户信息 前面已经绑定这个点击事件了
@@ -168,6 +291,40 @@ var default_1 = function (_Vue) {
             if (res.mp.detail.rawData) {
                 this.userInfo = JSON.parse(res.mp.detail.rawData); // 字符串
             }
+        }
+        // 3.代付款的点击事件
+
+    }, {
+        key: "goOrder",
+        value: function goOrder(type) {
+            // 4.跳转页面  每一次跳转将页面的类型送过去
+            wx.navigateTo({
+                url: "/pages/order/main?type=" + type
+            });
+        }
+        // 4.在生命周期里面设置一些
+
+    }, {
+        key: "onShow",
+        value: function onShow() {
+            var _this2 = this;
+
+            // 5.微信的授权检测  scope.userInfo  res.authSetting['scope.userInfo'] 布尔值 
+            wx.getSetting({
+                success: function success(res) {
+                    if (res.authSetting['scope.userInfo']) {
+                        // 6.为true 检测成功 授权成功
+                        wx.getUserInfo({
+                            success: function success(res) {
+                                _this2.userInfo = res.rawData;
+                            }
+                        });
+                    } else {
+                        // 7.弹框提示去授权
+                        _this2.showModal = true;
+                    }
+                }
+            });
         }
     }]);
 

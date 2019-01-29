@@ -15,4 +15,44 @@ page {
   background: -webkit-gradient( linear,left top, left bottom,from(#252525),color-stop(#494949),to(#545454));
   background: linear-gradient( #252525,#494949,#545454);
   color: #fff;
+  text-align: left;
+  line-height: 422rpx;
+}
+.header>._img {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.header>._span {
+  margin-left: 58rpx;
+}
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 176rpx;
+  line-height: 179rpx;
+  border: 1rpx solid #EAEAEA;
+}
+.type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  text-align: center;
+}
+.type ._li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  color: #989898;
 }

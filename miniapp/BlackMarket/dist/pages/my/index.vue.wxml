@@ -1,9 +1,34 @@
 <template name="1ee529ef">
   <view class="_div data-v-4d761a47 my-wrapper">
     <view class="_div data-v-4d761a47 my-header">
-      <view class="_section data-v-4d761a47"> 我是用户的信息 </view>
+      <view class="_header data-v-4d761a47 header">
+        <image src="{{userInfo.avatarUrl}}" mode="widthFix" class="_img data-v-4d761a47"></image> <label class="_span data-v-4d761a47">{{userInfo.nickName}}</label>
+      </view>
     </view>
-    <view class="_div data-v-4d761a47 my-bottom"><button open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_button data-v-4d761a47">获取用户信息</button>
+    <view class="_section data-v-4d761a47">
+      <view bindtap="handleProxy" class="_p data-v-4d761a47 order" data-eventid="{{'0'}}" data-comkey="{{$k}}"><label class="_span data-v-4d761a47">我的订单</label> <label class="_span data-v-4d761a47">查看全部</label></view>
+      <view class="_div data-v-4d761a47 type">
+        <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_li data-v-4d761a47">
+          <i-icon type="commodity" size="30" class="_i-icon data-v-4d761a47"></i-icon> <label class="_span data-v-4d761a47">待付款</label>
+        </view>
+        <view bindtap="handleProxy" data-eventid="{{'2'}}" data-comkey="{{$k}}" class="_li data-v-4d761a47">
+          <i-icon type="commodity" size="30" class="_i-icon data-v-4d761a47"></i-icon> <label class="_span data-v-4d761a47">待发货</label>
+        </view>
+        <view bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_li data-v-4d761a47">
+          <i-icon type="commodity" size="30" class="_i-icon data-v-4d761a47"></i-icon> <label class="_span data-v-4d761a47">待收货</label>
+        </view>
+        <view bindtap="handleProxy" data-eventid="{{'4'}}" data-comkey="{{$k}}" class="_li data-v-4d761a47">
+          <i-icon type="commodity" size="30" class="_i-icon data-v-4d761a47"></i-icon> <label class="_span data-v-4d761a47">评价</label>
+        </view>
+        <view bindtap="handleProxy" data-eventid="{{'5'}}" data-comkey="{{$k}}" class="_li data-v-4d761a47">
+          <i-icon type="commodity" size="30" class="_i-icon data-v-4d761a47"></i-icon> <label class="_span data-v-4d761a47">退款售后</label>
+        </view>
+      </view>
+    </view>
+    <i-modal visible="{{showModal}}" show-ok="false" show-cancel="false" class="_i-modal data-v-4d761a47">
+      <view class="_view data-v-4d761a47">为了更好的提供服务,我们需要获取您的用户信息</view> <button open-type="getUserInfo" bindgetuserinfo="handleProxy" bindtap="handleProxy" data-eventid="{{'6'}}" data-comkey="{{$k}}" class="_button data-v-4d761a47">确定</button> <button open-type="openSetting" bindtap="handleProxy" data-eventid="{{'7'}}" data-comkey="{{$k}}" class="_button data-v-4d761a47">取消</button>
+    </i-modal>
+    <view class="_div data-v-4d761a47 my-bottom"><button open-type="getUserInfo" bindgetuserinfo="handleProxy" data-eventid="{{'8'}}" data-comkey="{{$k}}" class="_button data-v-4d761a47">获取用户信息</button>
       <i-cell-group class="_i-cell-group data-v-4d761a47">
         <i-cell title="地址管理" is-link url class="_i-cell data-v-4d761a47"></i-cell> <button class="_button data-v-4d761a47">意见反馈</button> <button class="_button data-v-4d761a47">在线客服</button>
       </i-cell-group>
