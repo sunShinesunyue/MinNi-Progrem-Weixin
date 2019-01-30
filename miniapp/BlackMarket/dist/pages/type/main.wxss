@@ -20,7 +20,7 @@ page.data-v-3ff96255 {
 .type-header.data-v-3ff96255 {
   width: 100%;
   height: 130rpx;
-  border: 1rpx solid #E5E3E4;
+  border: 1rpx solid #e5e3e4;
 }
 .list.data-v-3ff96255 {
   width: 100%;
@@ -34,9 +34,9 @@ page.data-v-3ff96255 {
 .list>._ul.data-v-3ff96255 {
   width: 30%;
   height: auto;
-  background: #F8F8F8;
+  background: #f8f8f8;
   font-size: 36rpx;
-  color: #4D4D4D;
+  color: #4d4d4d;
 }
 .list ._ul ._li.data-v-3ff96255 {
   padding: 45rpx 0;

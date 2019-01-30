@@ -54,6 +54,13 @@ app.$mount();
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 // 1.从vuex里面引入
 
@@ -80,7 +87,7 @@ app.$mount();
         // 11.获取当前切换下面所对应的内容
         var current = this.categories[this.current];
         // 12.替换所切换跳转的路径
-        current.cover_url = current.cover_url.replace('/commodity/details', '/detail/main');
+        current.cover_url = current.cover_url.replace("/commodity/details", "/detail/main");
         // 13.将替换好的路径返出
         return current;
       } else {
@@ -92,7 +99,7 @@ app.$mount();
   // 8.方法
   methods: __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_extends___default()({}, __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_vuex__["b" /* mapActions */])({
     // 9.将要渲染的数据请求出来
-    getCategories: 'index/getCategories'
+    getCategories: "index/getCategories"
   }), {
     // 15.点击获取
     tabClick: function tabClick(e) {
@@ -101,6 +108,11 @@ app.$mount();
         // 17.就让current 和当前点击的这一项对应上
         this.current = e.target.dataset.index;
       }
+    },
+
+    // 1-1 模板消息推送通知
+    submit: function submit(e) {
+      console.log('--模板消息推送通知', e);
     }
   }),
   // 9.调用这个获取数据的方法
@@ -111,7 +123,14 @@ app.$mount();
 
 /***/ }),
 
-/***/ 202:
+/***/ 112:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 122:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -120,25 +139,37 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "type-wrapper"
   }, [_c('div', {
     staticClass: "type-header"
-  }, [_vm._v("\n        搜索 头部\n    ")]), _vm._v(" "), _c('section', {
+  }, [_vm._v("\n    搜索 头部\n  ")]), _vm._v(" "), _c('section', {
     staticClass: "list"
   }, [_c('ul', {
     staticClass: "type-left",
     attrs: {
-      "eventid": '0'
+      "eventid": '1'
     },
     on: {
       "click": _vm.tabClick
     }
-  }, _vm._l((_vm.categories), function(item, index) {
+  }, [_c('form', {
+    attrs: {
+      "report-submit": "",
+      "eventid": '0'
+    },
+    on: {
+      "submit": _vm.submit
+    }
+  }), _vm._v(" "), _vm._l((_vm.categories), function(item, index) {
     return _c('li', {
       key: index,
       class: index == _vm.current ? 'active' : '',
       attrs: {
         "data-index": index
       }
-    }, [_vm._v(_vm._s(item.name))])
-  })), _vm._v(" "), (_vm.currentList) ? _c('div', {
+    }, [_c('button', {
+      attrs: {
+        "form-type": "submit"
+      }
+    }, [_vm._v(" \n            " + _vm._s(item.name) + "\n        ")])], 1)
+  })], 2), _vm._v(" "), (_vm.currentList) ? _c('div', {
     staticClass: "content"
   }, [_c('a', {
     attrs: {
@@ -177,23 +208,16 @@ if (false) {
 
 /***/ }),
 
-/***/ 204:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
 /***/ 82:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_script_index_0_index_vue__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_3ff96255_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_template_compiler_index_id_data_v_3ff96255_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_1_1_4_mpvue_loader_lib_selector_type_template_index_0_index_vue__ = __webpack_require__(122);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(204)
+  __webpack_require__(112)
 }
 var normalizeComponent = __webpack_require__(4)
 /* script */
